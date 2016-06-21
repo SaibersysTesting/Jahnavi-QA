@@ -1,0 +1,176 @@
+1) what is the use of framework in automation testing?
+
+A testing framework or more specifically a testing automation framework is an
+execution environment for automated tests. It is the overall system in which the
+tests will be automated.
+ It is defined as the set of assumptions, concepts, and practices that constitute a
+work platform or support for automated testing.
+The Testing framework is responsible for:
+*Defining the format in which to express expectations.
+*Creating a mechanism to hook into or drive the application under test
+*Executing the tests
+*Reporting results
+Properties of a testing framework:
+*It is application independent.
+*It is easy to expand, maintain and perpetuate. 
+In short Test frameworks helps teams organize their test suites and in turn
+help improve the efficiency of testing. 
+
+2) what are things u consider/keep in framework?
+
+1.Test Script modularity(This allows reusable code to be incorporated throughout any given test)
+2.Data-driven or keyword-driven testing
+3.Environment to support the test framework
+4.Maintenance friendly
+5.The right tool
+6.How Would You Want Your Data In Framework 
+7.Test Script and Coding Standards( The framework should define proper coding and scripting standards. This concept encourages testers to write code in an object-oriented manner)
+
+
+3) different types of frameworks we have in selenium/qtp?
+
+Selenium/QTP Testing Frameworks:
+*Modular
+*Data driven
+*Keyword driven
+*Hybrid
+
+4) what is data driven frame work and when do we use it?
+
+Data-driven testing is creation of test scripts where test data and/or output values are read from data files instead of using the same hard-coded values each time the test runs.
+ This way testers can test how the application handles various inputs effectively. It can be any of the below data files
+*Data driven framework results in less amount of code.
+*Offers greater flexibility for maintaining and fixing the scripting issues.
+*Test Data can be developed
+
+5) what is keyword frame work and when do we use it?
+
+ Keyword driven testing is a type of functional automation testing framework which also known as table-driven testing or action word based testing.
+In Keyword-driven testing we use a table format, usually a spreadsheet, to define keywords or action words for each function that we would like to execute.
+*It is best suited for novice or a non technical tester.
+*Enables writing tests in a more abstract manner using this approach.
+*Keyword driven testing allows automation to be started earlier in the SDLC even before a stable build is delivered for testing.
+*There is a high degree of reusability.
+
+6) what is hybrid framework and when do we use it?
+
+Hybrid Framework is a combination of Keyword driven and data Driven framework that can be best described using the following flow diagram.
+Here for keywords we will use excel files to maintain test cases and for test data we can use data provider of TestNG framework.
+generally in hybrid framework we don't need to change anything in Keyword driven framework , here we just need to replace ExecuteTest.java file with HybridExecuteTest.java file.
+
+7) what is POM and modular framework?
+
+POM:
+It is one of the popular test automation framework in the industry and many companies are using it because of its easy test maintenance and reduces the duplication of code.
+The main advantage of Page Object Model is that if the UI changes for any page, it don’t require us to change any tests, we just need to change only the code within the page objects (Only at one place)
+Page Object model is writing all the functionalities / reusable components of a page that we want to automate in a separate class. 
+Say now if we consider four pages as Home page, Login page, Create Account and Forgot password page etc.
+For the above pages we will create classes as HomePage.class, LoginPage.class, CreateAccountPage.class and ForgotPasswordPage.class
+In each class we will identify and write reusable methods which are specific to a page.
+
+modular:
+this is driven by Module.
+it is small independent scripts that performs a specific set of tasks.
+It creates an layer in front of the component and hide the components from a non technical user as well as application.
+The small components are added up to build a large test set
+
+8) what is testng and junit?
+
+TestNG:
+TestNG is a testing framework that overcomes the limitations of another popular testing framework called JUnit
+The "NG" means "Next Generation"
+Most Selenium users use this more than JUnit because of its advantages.
+There are so many features of TestNG, but we will only focus on the most important ones that we can use in Selenium.
+*Annotations are easier to understand
+*Test cases can be grouped more easily
+*Parallel testing is possible
+Eg:@BeforeSuite,@AfterSuite,@BeforeClass,@AfterClass,@DataProvider,@Factory
+
+JUnit:
+JUnit has a graphical user interface (GUI), making it possible to write and test source code quickly and easily.
+ JUnit allows the developer to incrementally build test suites to measure progress and detect unintended side effects
+Tests can be run continuously
+Results are provided immediately
+JUnit shows test progress in a bar that is normally green but turns red when a test fails
+An ongoing list of unsuccessful tests appears in a space near the bottom of the display window
+Multiple tests can be run concurrently
+No subjective human judgments or interpretations of test results are required.
+The simplicity of JUnit makes it possible for the software developer to easily correct bugs as they are found
+
+9) writing unit test cases with testng?
+
+Unit Test: Test individual component/class in isolation
+Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently scrutinized for proper operation
+Unit testing is often automated but it can also be done manually
+
+10) what are important elements in testng.xml?
+
+.
+
+11) what are different annotations in testng and junit?
+
+TestNG:
+@BeforeSuite
+@AfterSuite,
+@BeforeClass
+@AfterClass
+@DataProvider
+@Factory
+@Listeners
+JUnit:
+@Ignore
+@AfterClass
+@BeforeClass
+@After
+@Test
+@Rule
+@Parameters
+
+12) what is group and suite and parallel execution in testng?
+
+Rather than waiting for each test to execute individually, you can run multiple tests in parallel across various browsers and OS combinations
+In this way, more tests can be run at a time, thereby decreasing overall time spent on testing. 
+The only limit of running tests in parallel is the subscribed number of parallel tests
+Queuing manages to run a limited number of your additional tests
+Accounts subscribed with up to 5 parallel tests can queue 5 tests
+Any subscription with beyond 5 parallel tests can queue an equivalent number of tests.
+
+13) how to decide which test cases needs to be automated?
+
+parameters depending on application:
+Test case executed with different set of data
+Test case executed with different browser
+Test case executed with different environment
+Test case executed with complex business logic
+Test case executed with different set of users
+Test case Involves large amount of data
+Test case has any dependency
+Test case requires Special data
+
+15) what is the use of dataprovider annotation?
+
+It helps you to write data-driven tests, which essentially means that same test method can be run multiple times with different data-sets.
+Please note that DataProvider is the second way of passing parameters to test methods (first way we already discussed in @Parameters example)
+It helps in providing complex parameters to the test methods as it is not possible to do this from XML.
+
+16) Difference between junit and testng?
+
+*In TestNG, Parameterized test configuration is very easy while It is very hard to configure Parameterized test in JUnit.
+*TestNG support group test but it is not supported in JUnit.
+*TestNG has a feature to configure dependency test. Dependency test configuration for software web application is not possible in JUnit.
+*TestNG support @BeforeTest, @AfterTest, @BeforeSuite, @AfterSuite, @BeforeGroups, @AfterGroups which are not supported in JUnit.
+*Test prioritization, Parallel testing is possible in TestNG. It is not supported by JUnit.
+
+17) how to generate reports using testng?
+
+We need to refresh our project and we will get 1 additional folder (default suite) inside that folder we will get all the reports.
+One good feature about TestNG for every test case it create 3 different type of reports.
+
+
+
+
+
+
+
+
+
